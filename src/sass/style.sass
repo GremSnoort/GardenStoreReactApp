@@ -1,0 +1,292 @@
+@import 'normolize'
+@import 'fonts'
+@import 'elements'
+@import 'header'
+
+.hero
+    position: relative
+    z-index: 1
+    min-height: 600px
+    color: white
+    padding: 80px 0
+    margin-bottom: 40px
+    &__bg
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        object-fit: cover
+        z-index: -1
+
+.category
+    text-align: center
+    width: 25%
+    padding: 0 15px
+    &-wrap
+        align-items: stretch
+
+    &__img
+        display: block
+        width: 100%
+        height: 350px
+        object-fit: cover
+        border-radius: 12px
+        margin: 0 auto 16px
+
+    &:hover .category__text
+        text-decoration: underline
+
+.offer
+    background: linear-gradient(261.47deg, #0B710B 32.63%, #339933 98.96%)
+    color: white
+    padding: 32px 0 0
+    justify-content: center
+    border-radius: 12px
+    margin: 40px auto
+    h2
+        width: 100%
+        text-align: center
+        margin: 0 0 24px
+
+    input
+        border: 1px solid #FFFFFF
+        background-color: transparent
+        color: #fff
+        padding: 0 32px
+        &::placeholder
+            color: white
+
+    form
+        width: 580px
+        padding: 32px
+        margin: 0 0 0 auto
+        .btn
+            width: 100%
+            margin-top: 16px
+
+.item
+    display: block
+    width: 23%
+    padding-bottom: 32px
+    border: 1px solid #DDDDDD
+    border-radius: 12px
+    overflow: hidden
+    color: #282828
+    position: relative
+    z-index: 1
+
+    &-wrap
+        justify-content: flex-start
+        gap: 32px 2.667%
+
+    .btn
+        width: calc( 100% - 32px )
+        position: absolute
+        top: 210px
+        left: 16px
+        visibility: hidden
+        opacity: 0
+        transform: translateY(10px)
+        z-index: 9999
+
+    &__link
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: block
+        z-index: 1
+
+    .discount
+        position: absolute
+        top: 16px
+        right: 15px
+
+    &__img
+        width: 100%
+        height: 284px
+        object-fit: cover
+        display: block
+        margin-bottom: 24px
+        border-bottom: 1px solid #DDDDDD
+        margin: 0 0 20px
+
+    &__heading
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+    &__heading,
+    &__price
+        display: block
+        padding: 0 32px
+
+    &__price
+        padding: 16px 32px 0
+        b
+            font-weight: 600
+            font-size: 40px
+            margin-right: 14px
+
+        s
+            color: #8B8B8B
+
+    &:hover
+        .btn
+            visibility: visible
+            opacity: 1
+            transform: translateY(0px)
+
+.contact
+    padding: 40px 0 80px
+    &-items
+        gap: 32px
+        align-items: stretch
+        margin-bottom: 32px
+
+    &-item
+        width: calc( 60% - 16px )
+        border-radius: 12px
+        padding: 32px
+        background-color: #F1F3F4
+        &:nth-child(even)
+            width: calc( 40% - 16px )
+
+        a
+            &:hover
+                text-decoration: underline
+
+    &__caption
+        color: #8B8B8B
+        margin-bottom: 16px
+
+    .soc
+        justify-content: flex-start
+        gap: 16px
+
+    iframe
+        width: 100% !important
+        height: 350px !important
+        border-radius: 12px
+        background-color: #F1F3F4
+
+.card
+    .container
+
+    &__heading
+        margin: 0 0 32px
+
+    &-price
+        margin: 0 0 32px
+        s
+            color: #8B8B8B
+            margin: 0 0 0 22px
+
+    .btn
+        width: 70%
+
+    &__subheding
+        margin: 0 0 16px
+
+    &-act
+        gap: 20px
+        margin-bottom: 32px
+
+    &__text
+        font-size: 16px
+        font-size: 400
+
+    &-img
+        width: 58%
+        img
+            display: block
+            object-fit: cover
+            aspect-ratio: 4/3
+
+    &-content
+        width: 40%
+
+.p404
+    padding: 80px 0 40px
+    text-align: center
+    &-img
+        justify-content: center
+        margin-bottom: 32px
+
+    .h2
+        margin-bottom: 16px
+
+    p
+        color: #8B8B8B
+        margin-bottom: 32px
+
+.listing
+    &-filters
+        justify-content: flex-start
+        gap: 40px
+        margin-bottom: 40px
+
+.shopping_cart
+    .col
+        width: 58%
+        &:last-child
+            width: 40%
+
+    &-item
+        justify-content: flex-start
+        align-items: stretch
+        width: 100%
+        overflow: hidden
+        border: 1px solid #DDDDDD
+        border-radius: 12px
+        margin-bottom: 16px
+
+    &-price
+        gap: 16px
+        align-items: flex-end
+        strong
+            margin: 0
+        s
+            color: #8B8B8B
+            display: inline-block
+
+    &__img
+        display: block
+        width: 200px
+        height: 180px
+        object-fit: cover
+        border-right: 1px solid #DDDDDD
+
+    &-title
+        padding: 32px
+
+    &__heading
+        margin-bottom: 30px
+
+    .amount
+        margin-right: 32px
+
+    &-order
+        border-radius: 12px
+        background: #F1F3F4
+        padding: 32px
+        .text-big
+            color: #8B8B8B
+            font-weight: 500
+
+        &__heading 
+            font-weight: 600 !important
+            margin-bottom: 24px
+            color: #000 !important
+        .h2
+            color: #282828 
+            margin: 0
+
+    form 
+        margin-top: 32px
+
+    .btn 
+        width: 100%
+        margin-top: 16px

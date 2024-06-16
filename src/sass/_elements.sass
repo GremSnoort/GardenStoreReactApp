@@ -1,0 +1,306 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$prime: #393
+$black: #282828
+
+html, body
+    background-color: #000
+    background: #fff
+    font-family: 'Montserrat', sans-serif
+    color: #000
+    scroll-behavior: smooth
+
+body
+    min-height: 100vh
+    font-size: 20px
+    font-weight: 500
+    line-height: 26px
+    color: $black
+    position: relative
+    display: flex
+    flex-direction: column
+    z-index: 1
+    &.active
+        overflow: hidden
+
+.container
+    max-width: 1390px
+    height: 100%
+    padding: 0 30px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+.text-big
+    font-weight: 600
+    font-size: 40px
+    line-height: 44px
+
+section
+    padding: 40px 0
+    position: relative
+    z-index: 1
+
+img
+    max-width: 100%
+
+a,
+button
+    color: $black
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .8
+
+mark
+    background: transparent
+    color: $prime
+
+main
+    padding: 114px 0 40px
+
+[data-togler-content]
+    display: none
+
+.btn
+    font-size: 20px
+    font-weight: 600
+    line-height: 130%
+
+    display: inline-block
+    padding: 16px 56px
+    border-radius: 6px
+    min-width: 150px
+    text-align: center
+    background-color: $prime
+
+    color: white
+    position: relative
+    z-index: 1
+    &_white
+        background-color: #fff
+        color: $black
+    &:hover
+        opacity: 1
+        background-color: $black
+        color: #fff
+
+    &_link
+        color: #282828
+        text-decoration: underline
+        font-size: 16px
+
+.wrapper, .fx, .fx-wrp
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.fx-wrp
+    align-items: flex-start
+    flex-wrap: wrap
+
+ul
+    list-style: none
+
+h1, .h1
+    font-size: 96px
+    font-weight: 700
+    line-height: 110%
+    margin: 0 0 40px
+
+h2, .h2
+    font-size: 64px
+    font-weight: 700
+    line-height: 110%
+    margin: 0 0 40px
+
+.cart
+    width: 70px
+    height: 70px
+    background-repeat: no-repeat
+    background-position: center center
+    background-image: url('../img/basket.svg')
+    background-size: auto 48px
+    position: relative
+    z-index: 1
+    .badge
+        position: absolute
+        top: 13px
+        left: 9px
+
+.badge
+    display: inline-block
+    text-align: center
+    font-size: 12px
+    color: white
+    border-radius: 50%
+    width: 26px
+    line-height: 26px
+    font-weight: 600
+    height: 26px
+    background-color: $prime
+    &:empty
+        display: none
+
+.link
+    display: inline-block
+    color: #8B8B8B
+    padding: 8px 16px 7px
+    font-weight: 500
+    font-size: 16px
+    line-height: 20.16px
+    text-align: center
+    background-color: #fff
+    position: relative
+    z-index: 111
+    border: 1px solid #DDDDDD
+    border-radius: 6px
+    &:hover
+        opacity: 1
+        color: #8B8B8B
+        background-color: #F1F3F4
+    &:active
+        color: #282828
+        background-color: #fff
+
+.wrapper
+    position: relative
+    z-index: 1
+    margin: 0 0 40px
+    &::after
+        content: ''
+        display: block
+        width: 100%
+        height: 1px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+        background-color: #DDDDDD
+
+    h2, .h2
+        background-color: #fff
+        position: relative
+        z-index: 11
+        margin: 0
+        padding-right: 32px
+
+input, select
+    font-weight: 500
+    font-size: 20px
+    line-height: 26px
+    display: block
+    width: 100%
+    border-radius: 6px
+    padding: 0 16px
+    appearance: none
+    height: 58px
+    margin: 0 0 16px
+    color: #000
+    border: 1px solid #DDDDDD
+
+    &::placeholder
+        color: #8B8B8B
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+
+    &[type=number]
+        -moz-appearance: textfield
+
+select
+    background-image: url('../img/arrow.svg')
+    background-repeat: no-repeat
+    background-position: center right 12px
+    height: 36px
+    font-size: 16px
+    margin: 0
+    width: 200px
+
+.discount
+    display: inline-block
+    background-color: $prime
+    color: white
+    line-height: 100%
+    padding: 4px 8px 3px
+    border-radius: 6px
+    vertical-align: top
+    top: 0
+    font-size: 20px
+
+
+
+.amount
+    border: 1px solid #DDDDDD
+    border-radius: 6px
+    button
+        border-radius: 6px
+        font-size: 38px
+        font-weight: normal
+        color: #8B8B8B
+        width: 58px
+        height: 58px
+        display: inline-block
+        &:last-of-type
+            border-left: 1px solid #DDDDDD
+        &:first-of-type
+            border-right: 1px solid #DDDDDD
+
+    input
+        font-weight: 600
+        border: none
+        text-align: center
+        width: 82px
+        margin: 0
+        color: #000
+        padding: 5px
+
+.filter
+    gap: 16px
+    max-width: 310px
+    .label
+        color: #282828
+
+    input
+        margin: 0
+        border-radius: 6px
+        height: 36px
+        font-size: 16px
+
+    .fx
+        gap: 16px
+        input
+            width: 50%
+
+.checkbox
+
+    label
+        &::after
+            content: ''
+            display: inline-block
+            width: 34px
+            height: 34px
+            border: 1px solid #DDDDDD
+            border-radius: 6px
+            vertical-align: middle
+            margin-left: 16px
+            background-repeat: no-repeat
+            background-position: center center
+
+    input
+        display: none
+        &:checked ~ label::after
+            border-color: $prime
+            background-color: $prime
+            background-image: url('../img/check.svg')

@@ -1,0 +1,99 @@
+.footer
+    margin-top: auto
+    padding-top: 53px
+    a
+        display: block
+        padding: 7px 0
+        &:hover
+            opacity: 1
+            color: $prime
+            text-decoration: underline
+
+        &.active
+            color: $prime
+            pointer-events: none
+
+    &-nav
+        align-items: flex-start
+
+    &-navbar
+        max-width: 51%
+        flex-wrap: wrap
+        justify-content: flex-start
+        gap: 0 5%
+        li
+            width: 30%
+            padding-bottom: 1px
+
+        a
+            color: #6F6F6F
+            font-size: 12px
+            font-weight: 400
+            letter-spacing: 0.6px
+            text-transform: uppercase
+
+    &-btns
+        a
+            min-width: 50%
+            margin-bottom: 10px
+            padding-left: 44px !important
+            margin-bottom: 5px
+
+        .mail
+            color: #6F6F6F
+
+    &__link
+        color: $prime
+        text-decoration: underline
+        &:hover
+            text-decoration: none !important
+
+    &-bottom
+        margin-top: 50px
+        color: #8792A4
+        font-size: 12px
+        font-style: normal
+        font-weight: 400
+        line-height: 129.5%
+        padding: 15px 0
+        @media screen and (min-width: 700px)
+            border-top: 1px solid rgba(150, 159, 175, 0.26)
+
+    @media screen and (max-width: 991px)
+        &-navbar
+            gap: 4%
+            max-width: 41%
+            li
+                width: 48%
+
+    @media screen and (max-width: 700px)
+        &__link 
+            display: inline-block !important
+        .logo
+            margin-bottom: 35px
+        &-nav
+            flex-wrap: wrap
+
+        &-btns
+            width: 100%
+            margin-bottom: 30px
+            a
+                display: inline-block
+
+        &-navbar
+            max-width: 100%
+            order: 3
+
+        &-bottom
+            display: block
+            margin-top: 0
+            padding: 26px 0 22px
+            a
+                margin-bottom: 37px
+            span
+                text-align: center
+                display: block
+                margin-bottom: 10px
+                &:first-of-type
+                    padding-top: 26px
+                    border-top: 1px solid rgba(150, 159, 175, 0.26)
